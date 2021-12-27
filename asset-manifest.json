@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/Vancouver/static/css/main.073c9b0a.css",
+    "main.js": "/Vancouver/static/js/main.2f4d0cc7.js",
+    "static/js/787.aa0fb5d7.chunk.js": "/Vancouver/static/js/787.aa0fb5d7.chunk.js",
+    "index.html": "/Vancouver/index.html",
+    "main.073c9b0a.css.map": "/Vancouver/static/css/main.073c9b0a.css.map",
+    "main.2f4d0cc7.js.map": "/Vancouver/static/js/main.2f4d0cc7.js.map",
+    "787.aa0fb5d7.chunk.js.map": "/Vancouver/static/js/787.aa0fb5d7.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.073c9b0a.css",
+    "static/js/main.2f4d0cc7.js"
+  ]
+}
