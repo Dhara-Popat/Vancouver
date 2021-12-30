@@ -18,12 +18,12 @@ export const Sidebar = [
     {
         title: 'Workers',
         path: '/vancouver/workers',
-        icon: <BsIcons.BsFillBagFill/>,
+        icon: <BsIcons.BsPeople/>,
     },
     {
         title: 'Employers',
         path: '/vancouver/employers',
-        icon: <BsIcons.BsFillBagFill/>,
+        icon: <BsIcons.BsFillPeopleFill/>,
     },
     {
         title: 'Finances',
