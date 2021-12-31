@@ -4,13 +4,12 @@ import * as AiIcons from 'react-icons/ai';
 
 function Payments(props) {
     // let lastele = Data[(Data.length - 1)];
-    let d = Data[(Data.length - 1)].date
-    // console.log(d)
-    let date = new Date(d)
+    let data = Data[(Data.length - 1)].date
+    let date = new Date(data)
     let options = { year: 'numeric', month: 'short', day: 'numeric' }
     let timeOptions = { hour: '2-digit', minute: '2-digit' }
-    // console.log(date)   
     let count = Data.length
+    
     return (
         <div className='Card-Container d-flex flex-column justify-content-between'>
             <div className='d-flex flex-column justify-content-start'>
