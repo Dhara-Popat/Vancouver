@@ -1,38 +1,25 @@
 import React from 'react'
-import * as AiIcons from 'react-icons/ai';
-import * as FaIcons from 'react-icons/fa';
-import * as IoIcons from 'react-icons/io';
-import * as BsIcons from "react-icons/bs";
+import Menu from './Menu';
+import Dropdown from './Dropdown';
+import logo from '../logo.svg'
 
-export const Sidebar = [
-    {
-        title: 'Home',
-        path: '/vancouver',
-        icon: <AiIcons.AiFillHome />,
-    },
-    {
-        title: 'Jobs',
-        path: '/vancouver/jobs',
-        icon: <BsIcons.BsFillBagFill/>,
-    },
-    {
-        title: 'Workers',
-        path: '/vancouver/workers',
-        icon: <BsIcons.BsPeople/>,
-    },
-    {
-        title: 'Employers',
-        path: '/vancouver/employers',
-        icon: <BsIcons.BsFillPeopleFill/>,
-    },
-    {
-        title: 'Finances',
-        path: '/vancouver/finances',
-        icon: <FaIcons.FaDollarSign/>,
-    },
-    {
-        title: 'Settings',
-        path: '/vancouver/settings',
-        icon: <IoIcons.IoIosSettings />,
-    }
-]
+function Sidebar() {
+    return (
+        <>
+            <div className="d-flex flex-column align-items-center align-items-sm-start pt-2 text-white min-vh-100 sidebar-padding">
+                <div className='d-flex justify-content-between align-items-center sidebar-menu'>
+                    <img src={logo} alt="hugenerd" class="rounded-circle logo" />
+                    {/* <div className="d-flex align-items-center mb-md-0 me-md-auto text-white text-decoration-none heading">
+                                        <span className="fs-6 d-none d-sm-inline heading-title">Vancouver</span>
+                                    </div> */}
+                    <Dropdown />
+                </div>
+                <ul className="nav nav-pills flex-column mb-sm-auto mb-0 align-items-center align-items-sm-start sidebar-menu" id="menu">
+                    <Menu />
+                </ul>
+            </div>
+        </>
+    )
+}
+
+export default Sidebar

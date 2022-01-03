@@ -28,15 +28,20 @@ body{
   height: 80px;
 }
 
+i{
+  margin-top: -2px;
+  padding: 0 3px;
+}
+
 .heading-title{
    padding-left: 5px;
 }
-
+/* 
 .link-hover:hover{
    background-color: rgb(15, 66, 53);
    width: 100%;
    border-radius: 30px 0 0 30px;
-}
+} */
 
 .active{
   background-color: rgb(15, 66, 53);
@@ -46,7 +51,7 @@ body{
 
 /* For Finances page */
 
-.Card-Color{
+.Card-Content{
   background-color: rgb(203, 250, 236);
   position: relative;
   display: flex;
@@ -97,6 +102,12 @@ body{
 
 
 @media (min-width: 770px) and (max-width: 990px){
+
+  /* for sidebar menu */
+
+  .sidebar-padding{
+    padding-left: 10px;
+  }
   .drop-down{
     display: none;
   }
@@ -104,6 +115,9 @@ body{
     width: 50px;
     height: 50px;
   }
+
+  /* For Finances page */
+
   .billing-container{
     flex-direction: column;
     align-items: flex-start;
@@ -111,13 +125,22 @@ body{
 }
 
 @media (max-width: 768px){
-  .Card-Color{
+  
+  /* for sidebar menu */
+
+  .sidebar-padding{
+    padding-left: 0px;
+  }
+  .Card-Content{
     flex-direction: column;
     padding: 20px;
   }
   .Card-Container{
     width: 100%;
   }
+
+  /* For Finances page */
+
   .billing-container{
     flex-direction: column;
     align-items: flex-start;
@@ -131,8 +154,8 @@ body{
     display: none;
   }
   .logo{
-    height: 20px;
-    width: 20px;
+    height: 30px;
+    width: 30px;
   }
 }
 
