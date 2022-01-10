@@ -1,3 +1,14 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul{
+  margin: 0;
+  padding: 0;
+}
+
 body{
   margin: 0;
   padding: 0;
@@ -8,10 +19,24 @@ body{
   height: 100%;
 }
 
+.height{
+  height: 100%;
+  background-color: rgb(203, 250, 236);
+}
+
 .heading{
   height: 80px;
   display: flex;
-  align-items: center;
+}
+
+.Right-Side{
+  padding-left: 30px;
+  width: 100%;
+  background-color: white;
+}
+
+.small-font{
+  font-size: small;
 }
 
 /* for sidebar menu */
@@ -36,12 +61,6 @@ i{
 .heading-title{
    padding-left: 5px;
 }
-/* 
-.link-hover:hover{
-   background-color: rgb(15, 66, 53);
-   width: 100%;
-   border-radius: 30px 0 0 30px;
-} */
 
 .active{
   background-color: rgb(15, 66, 53);
@@ -56,24 +75,18 @@ i{
   position: relative;
   display: flex;
   width: 100%;
-  height: 100vh;
   justify-content: space-around;
   padding: 30px;
   gap: 15px;
 }
 
-.Card-Container{
+.Card-container{
   width: 50%;
   display: inline-block;
   background-color: white;
   height: 450px;
   padding: 20px;
   border: 1px solid rgb(196, 192, 192);
-}
-
-.Right-Side{
-  padding-left: 30px;
-  width: 100%;
 }
 
 .billing-container{
@@ -99,6 +112,78 @@ i{
   line-height: 65px;
 }
 
+/* For Workers page */
+
+.Worker-container{
+    width: 100%;
+    display: inline-block;
+    background-color: white;
+    padding: 20px;
+    border: 1px solid rgb(196, 192, 192);
+    overflow-x: auto;
+}
+
+.worker-tab-container{
+  padding: 30px;
+  font-size: 16px;
+}
+
+.worker-tabs{
+  display: flex;
+  background-color: white;
+  gap: 20px;
+}
+
+.worker-tabs > li{
+  cursor: pointer;
+  list-style: none;
+  padding: 0 10px 10px 5px;
+  display: flex;
+  width: 120px;
+  justify-content: space-between;
+}
+
+.active-tab{
+  color: rgb(15, 66, 53);;
+  border-bottom: 3px solid rgb(15, 66, 53);
+}
+
+/* .worker-tab-content{
+  background-color: rgb(203, 250, 236);
+  position: relative;
+  width: 100%;
+} */
+
+.active-content{
+   height: 100px;
+   width: 150px;
+}
+
+/* .active-content:hover{
+   border: 2px solid rgb(15, 66, 53);
+} */
+
+.workers-table{
+   width: 100%;
+   font-size: 10px;
+   color: rgb(46, 45, 45);
+}
+
+/* .table-heading{
+   background-color: rgb(223, 223, 223);
+} */
+
+input[type='text']{
+  display: block;
+  width: 100%;
+  border: none;
+  border-bottom: 2px solid rgb(223, 223, 223);
+  outline: none;
+}
+
+th, td {
+  padding: 8px;
+}
 
 
 @media (min-width: 770px) and (max-width: 990px){
@@ -125,6 +210,10 @@ i{
 }
 
 @media (max-width: 768px){
+
+  .Right-Side{
+    padding-left: 0px;
+  }
   
   /* for sidebar menu */
 
@@ -135,7 +224,7 @@ i{
     flex-direction: column;
     padding: 20px;
   }
-  .Card-Container{
+  .Card-container{
     width: 100%;
   }
 
@@ -156,6 +245,12 @@ i{
   .logo{
     height: 30px;
     width: 30px;
+  }
+
+  /* For workers page */
+
+  .worker-tabs{
+    justify-content: center;
   }
 }
 

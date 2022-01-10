@@ -6,9 +6,9 @@ import logo from '../logo.svg'
 function Sidebar() {
     return (
         <>
-            <div className="d-flex flex-column align-items-center align-items-sm-start pt-2 text-white min-vh-100 sidebar-padding">
+            <div className="d-flex flex-column align-items-center align-items-sm-start pt-2 min-vh-100 text-white sidebar-padding">
                 <div className='d-flex justify-content-between align-items-center sidebar-menu'>
-                    <img src={logo} alt="hugenerd" class="rounded-circle logo" />
+                    <img src={logo} alt="hugenerd" className="rounded-circle logo" />
                     {/* <div className="d-flex align-items-center mb-md-0 me-md-auto text-white text-decoration-none heading">
                                         <span className="fs-6 d-none d-sm-inline heading-title">Vancouver</span>
                                     </div> */}

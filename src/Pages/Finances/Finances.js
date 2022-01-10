@@ -1,12 +1,12 @@
 import React from 'react'
 import '../App.css';
-import Payments from './Finances/Payments';
-import Billing from './Finances/Billing';
+import Payments from './Payments';
+import Billing from './Billing';
 
 
 function Finances(props) {
     return (
-        <>
+        <div className='height'>
             <div className='Right-Side border-bottom d-flex align-items-center border-bottom heading'>
                 <h5 className='my-6 d-flex '>{props.name}</h5>
             </div>
@@ -14,7 +14,7 @@ function Finances(props) {
                 <Payments name = 'Payments' />
                 <Billing  name = 'Billing' />
             </div>
-        </>
+        </div>
     )
 }
 

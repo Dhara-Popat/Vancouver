@@ -1,5 +1,5 @@
 import React from 'react'
-import Data from '../billing.json'
+import Data from './billing.json'
 import * as BiIcons from 'react-icons/bi';
 import * as AiIcons from 'react-icons/ai';
 
@@ -38,7 +38,7 @@ function Billing(props) {
     let result = PercentangeChange()
 
     return (
-        <div className='Card-Container d-flex flex-column justify-content-between'>
+        <div className='Card-container d-flex flex-column justify-content-between'>
             <div className='billing-container'>
                 <h3 className='font-weight-bold'>{props.name}</h3>
                 <span className='text-dark'>

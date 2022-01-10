@@ -1,5 +1,5 @@
 import React from 'react'
-import Data from '../payment.json'
+import Data from './payment.json'
 import * as AiIcons from 'react-icons/ai';
 
 function Payments(props) {
@@ -12,7 +12,7 @@ function Payments(props) {
     let count = Data.length
 
     return (
-        <div className='Card-Container d-flex flex-column justify-content-between'>
+        <div className='Card-container d-flex flex-column justify-content-between'>
             <div className='d-flex flex-column justify-content-start'>
                 <h3 className='font-weight-bold'>{props.name}</h3>
                 <small className='text-muted'>Last transfer sent {date.toLocaleDateString('en-US', options)} at {date.toLocaleTimeString('en-US', timeOptions)}</small>

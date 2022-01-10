@@ -1,11 +1,11 @@
-import './App.css';
+import './Pages/App.css';
 import Sidebar from './Components/Sidebar';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Home from './Pages/Home';
 import Jobs from './Pages/Jobs';
-import Workers from './Pages/Workers';
+import Workers from './Pages/Workers/Workers';
 import Employers from './Pages/Employers';
-import Finances from './Pages/Finances';
+import Finances from './Pages/Finances/Finances';
 import Settings from './Pages/Settings';
 
 function App() {
@@ -18,12 +18,11 @@ function App() {
               <Sidebar />
             </div>
             <div className="col px-0">
-              <div>
                 <Routes>
                   <Route exact path='/vancouver' element={<Home />} />
                   <Route path='/vancouver/home' element={<Home />} />
                   <Route path='/vancouver/jobs' element={<Jobs />} />
-                  <Route path='/vancouver/workers' element={<Workers />} />
+                  <Route path='/vancouver/workers' element={<Workers name='Workers'/>} />
                   <Route path='/vancouver/employers' element={<Employers />} />
                   <Route path='/vancouver/finances' element={<Finances name='Finances' />} />
                   <Route path='/vancouver/settings' element={<Settings />} />
@@ -31,7 +30,6 @@ function App() {
               </div>
             </div>
           </div>
-        </div>
       </Router>
     </>
   );
