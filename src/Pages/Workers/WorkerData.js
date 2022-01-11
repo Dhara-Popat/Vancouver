@@ -10,11 +10,11 @@ function WorkerData() {
 
     const countItemsTrue = (arr) => {
         let result = 0;
-        for(let x=0; arr.length >= x; x++){
-            if(arr[x] === true){
+        for (let x = 0; arr.length >= x; x++) {
+            if (arr[x] === true) {
                 result++;
             }
-            else if(arr[x] === null){
+            else if (arr[x] === null) {
                 result = 0;
             }
         }
@@ -23,45 +23,42 @@ function WorkerData() {
 
 
     //For verified Data
-    const verifiedData = data.map((data) =>  data.Acount_type.toLocaleLowerCase() === "verified")
-    let verifiedDataCount =  countItemsTrue(verifiedData)
+    const verifiedData = data.map((data) => data.Acount_type.toLocaleLowerCase() === "verified")
+    let verifiedDataCount = countItemsTrue(verifiedData)
 
     let verifiedData1 = data.map((data) => data.Acount_type)
-    // let checker = (array) => array.every(v => v === "verified")
-    // console.log(checker(verifiedData1))
+  
 
     function findObjeact(data, value) {
-            return data.find((value) => {
-                return value.Acount_type === 'verified';
-            });
+        return data.find((value) => {
+            return value.Acount_type === 'verified';
+        });
     }
 
-    console.log(findObjeact(data ,'verified'))
+    console.log(findObjeact(data, 'verified'))
 
-    
-    
     //For unverified Data
-    const unVerifiedData = data.map((data) =>  data.Acount_type.toLocaleLowerCase() === "unverified")
-    let unVerifiedDataCount =  countItemsTrue(unVerifiedData)
+    const unVerifiedData = data.map((data) => data.Acount_type.toLocaleLowerCase() === "unverified")
+    let unVerifiedDataCount = countItemsTrue(unVerifiedData)
 
     //For suspended Data
-    const suspendedData = data.map((data) =>  data.Acount_type.toLocaleLowerCase() === "suspended")
-    let suspendedDataCount =  countItemsTrue(suspendedData)
+    const suspendedData = data.map((data) => data.Acount_type.toLocaleLowerCase() === "suspended")
+    let suspendedDataCount = countItemsTrue(suspendedData)
 
     //For Deactivated Data
-    const deactivatedData = data.map((data) =>  data.Acount_type.toLocaleLowerCase() === "deactivated")
-    let deactivatedDataCount =  countItemsTrue(deactivatedData)
+    const deactivatedData = data.map((data) => data.Acount_type.toLocaleLowerCase() === "deactivated")
+    let deactivatedDataCount = countItemsTrue(deactivatedData)
 
     return (
         <>
-         <SelectData 
-         count={count} 
-         verifiedDataCount= {verifiedDataCount} 
-         unVerifiedDataCount= {unVerifiedDataCount}
-         suspendedDataCount = {suspendedDataCount}
-         deactivatedDataCount = {deactivatedDataCount}
-         />
-         <WorkersTable data = {data} verifiedDataCount= {verifiedDataCount} />
+            <SelectData
+                count={count}
+                verifiedDataCount={verifiedDataCount}
+                unVerifiedDataCount={unVerifiedDataCount}
+                suspendedDataCount={suspendedDataCount}
+                deactivatedDataCount={deactivatedDataCount}
+            />
+            <WorkersTable data={data} verifiedDataCount={verifiedDataCount} />
         </>
     )
 }

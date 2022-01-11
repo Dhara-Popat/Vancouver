@@ -19,8 +19,7 @@ function App() {
             </div>
             <div className="col px-0">
                 <Routes>
-                  <Route exact path='/vancouver' element={<Home />} />
-                  <Route path='/vancouver/home' element={<Home />} />
+                  <Route exact path='/vancouver/home' element={<Home />} />
                   <Route path='/vancouver/jobs' element={<Jobs />} />
                   <Route path='/vancouver/workers' element={<Workers name='Workers'/>} />
                   <Route path='/vancouver/employers' element={<Employers />} />
