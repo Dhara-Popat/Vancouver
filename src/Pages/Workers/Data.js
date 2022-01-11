@@ -1,59 +1,39 @@
-import React from 'react'
-import SelectData from './SelectData'
-import { WorkersTable } from './WorkersTable'
-import WORKERS_DATA from './WORKERS_DATA.json'
-// import { Data } from './Data'
+import React, { useState } from 'react'
+// import { WorkersTable } from './WorkersTable'
 
-function WorkerData() {
-    let count = WORKERS_DATA.length
-    let data = WORKERS_DATA
 
-    const countItemsTrue = (arr) => {
-        let result = 0;
-        for(let x=0; arr.length >= x; x++){
-            if(arr[x] === true){
-                result++;
-            }
-            else if(arr[x] === null){
-                result = 0;
-            }
-        }
-        return result;
-    }
+function SelectData(props) {
 
-    //For verified Data
-    const verifiedData = data.map((data) =>  data.Acount_type.toLocaleLowerCase() === "verified")
-    let verifiedDataCount =  countItemsTrue(verifiedData)
-
-    // const verifiedData1 = data.map((data) =>  data)
-    // console.log(verifiedData1)
-
-    //For unverified Data
-    const unVerifiedData = data.map((data) =>  data.Acount_type.toLocaleLowerCase() === "unverified")
-    let unVerifiedDataCount =  countItemsTrue(unVerifiedData)
-
-    //For suspended Data
-    const suspendedData = data.map((data) =>  data.Acount_type.toLocaleLowerCase() === "suspended")
-    let suspendedDataCount =  countItemsTrue(suspendedData)
-
-    //For Deactivated Data
-    const deactivatedData = data.map((data) =>  data.Acount_type.toLocaleLowerCase() === "deactivated")
-    let deactivatedDataCount =  countItemsTrue(deactivatedData)
+    const [activeTab, setActiveTab] = useState('data1')
 
     return (
         <>
-         <SelectData 
-         count={count} 
-         verifiedDataCount= {verifiedDataCount} 
-         unVerifiedDataCount= {unVerifiedDataCount}
-         suspendedDataCount = {suspendedDataCount}
-         deactivatedDataCount = {deactivatedDataCount}
-         />
-         <WorkersTable data = {data} verifiedDataCount= {verifiedDataCount} />
+            <div className='d-flex'>
+                <div className='d-flex active-content bg-transparent active-data'>
+                    <div className='d-flex flex-column' onClick= {handleData1}>
+                        <span className='small-font'><b>Total</b></span>
+                        <span><b>{props.count}</b></span>
+                    </div>
+                </div>
+                <div className='d-flex flex-column active-content'>
+                    <span>Verified</span>
+                    {props.verifiedDataCount}
+                </div>
+                <div className='d-flex flex-column active-content'>
+                    <span>unverified</span>
+                    {props.unVerifiedDataCount}
+                </div>
+                <div className='d-flex flex-column active-content'>
+                    <span>Suspended</span>
+                    {props.suspendedDataCount}
+                </div>
+                <div className='d-flex flex-column active-content'>
+                    <span>Deactivated</span>
+                    {props.deactivatedDataCount}
+                </div>
+            </div>
         </>
     )
 }
 
-export default WorkerData
-
-
+export default SelectData
